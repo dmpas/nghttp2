@@ -51,3 +51,8 @@ build_script:
 
 # to disable automatic builds
 # build: off
+after_build:
+- 7z a lib.zip %APPVEYOR_BUILD_FOLDER%/lib/Debug/*
+artifacts:
+- path: lib.zip
+  name: lib
